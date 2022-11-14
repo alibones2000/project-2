@@ -18,7 +18,7 @@ handleAddFilm(newObj)
 
 return (
   <div className="new-movie-form">
-    <h2>New Plant</h2>
+    <h2>New Movie</h2>
     <form onSubmit={handleSubmit}>
       <input type="text" name="name" placeholder="Movie name" onChange={(e)=> setNewTitle(e.target.value)} value={newTitle}/>
       <input type="text" name="image" placeholder="Image URL" onChange={(e)=> setNewImage(e.target.value)} value={newImage}/>
