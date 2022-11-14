@@ -2,11 +2,15 @@ import MovieCard from './MovieCard'
 import React from 'react'
 
 
-function MovieContainer() {
+function MovieContainer({filterAllFilms}) {
+const eachFilm = filterAllFilms.map(film => {
+return < MovieCard key={film.id} film={film}/>
+})
+
   return (
     <div>
-      
-   < MovieCard />
+      {eachFilm}
+   
     </div>
   )
 }
