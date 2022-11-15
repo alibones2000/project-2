@@ -44,7 +44,16 @@ function updateFavFilm(updatedFilm) {
     } else return film
   })
   setFilms(updatedFilms)
+  const favFilm = updatedFilms.filter(film => {
+    if (film.favorite === true) {
+      return film
+    } 
+    const eachFavFilm = favFilm.map(film => {
+      <Fav />
+    })
+  })
 }
+
   return (
     <div className="App">
        <Nav />
