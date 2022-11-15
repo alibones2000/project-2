@@ -4,12 +4,12 @@ import Form from './Form'
 import MovieContainer from './MovieContainer'
 import Nav from './Nav'
 import Fav from './Fav'
-import Search from './Search'
-
+import {Routes, Route} from "react-router-dom"
 
 function App() {
   const [films, setFilms] = useState([])
-  const [searchFilms, SetSearchFilms] = useState('')
+  const [searchFilms, setSearchFilms] = useState('')
+  
 
   useEffect(() =>{
     fetch('http://localhost:3000/films')
@@ -18,10 +18,12 @@ function App() {
   },[])
 
   const filterAllFilms = films.filter(filterFilms => {
-    return filterFilms.name.toLowerCase().includes(searchFilms.toLowerCase())
+    return filterFilms.title.toLowerCase().includes(searchFilms.toLowerCase())
   })
+
+
   function handleSearch(e){
-    SetSearchFilms(e.target.value)
+    setSearchFilms(e.target.value)
   }
 
   function handleAddFilm(newObj){
@@ -34,18 +36,23 @@ function App() {
   })
   .then(res => res.json())
   .then(data => setFilms([...films, data]))
-    
 }
-
+function updateFavFilm(updatedFilm) {
+  const updatedFilms = films.map(film => {
+    if (film.id === updatedFilm.id) {
+      return updatedFilm
+    } else return film
+  })
+  setFilms(updatedFilms)
+}
   return (
     <div className="App">
-
-      <Form handleAddFilm={handleAddFilm}/>
-      <MovieContainer filterAllFilms={filterAllFilms}/>
-      <Nav />
-      <Fav />
-      <Search searchFilms={searchFilms} handleSearch={handleSearch}/>
-     
+       <Nav />
+      <Routes>
+        <Route path="/" element={<MovieContainer filterAllFilms={filterAllFilms} updateFavFilm={updateFavFilm} searchFilms={searchFilms} handleSearch={handleSearch}/>}/>
+        <Route path="form" element={<Form handleAddFilm={handleAddFilm}/>}/>
+        <Route path="fav" element={<Fav />}/>
+     </Routes>
     </div>
   );
 }

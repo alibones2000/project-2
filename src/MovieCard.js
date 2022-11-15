@@ -1,14 +1,29 @@
 import React, {useState} from 'react'
 
-function MovieCard({film}) {
+function MovieCard({film, updateFavFilm}) {
 const [originalTitle, setOriginalTitle] = useState (true)
-const {title, original_title, original_title_romanised, image, description, director, release_date} = film
+const {id, title, original_title, original_title_romanised, image, description, director, release_date} = film
+const [favorite, setFavorite] = useState(false)
+
 
 function handleClick () {
   setOriginalTitle((originalTitle) => !originalTitle)
 }
+
+function handleFavClick(){
+  setFavorite((favorite) => !favorite)
+  fetch(`http://localhost:3000/films/${id}`, {
+    method: 'PATCH', 
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({favorite : !film.favorite}),
+  })
+  .then(response => response.json())
+  .then(data => updateFavFilm(data))
+}
   return (
-    <li >
+
       <div >
         <img onClick={handleClick} src={image} alt={title}/>
         <div >
@@ -18,8 +33,11 @@ function handleClick () {
           <p>{director}</p>
           <p>{release_date} </p>
         </div>
+      <button  onClick={handleFavClick} id="add-to-fav">
+        Add to Favorites{favorite ? "💓" : "🤍"} 
+      </button>
+ 
       </div>
-    </li>
   );
 }
 
