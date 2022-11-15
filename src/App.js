@@ -18,7 +18,7 @@ function App() {
   },[])
 
   const filterAllFilms = films.filter(filterFilms => {
-    return filterFilms.name.toLowerCase().includes(searchFilms.toLowerCase())
+    return filterFilms.title.toLowerCase().includes(searchFilms.toLowerCase())
   })
   function handleSearch(e){
     SetSearchFilms(e.target.value)
