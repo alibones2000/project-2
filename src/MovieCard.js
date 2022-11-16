@@ -32,7 +32,7 @@ function handleDelete() {
 }
   return (
 
-      <div >
+      <div className='film-info'>
         <img onClick={handleClick} src={image} alt={title}/>
         <div >
           <h1>{title}</h1>
