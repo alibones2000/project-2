@@ -70,7 +70,6 @@ const favFilms = films.filter(film => {
       <Routes>
         <Route path="/" element={<MovieContainer filterAllFilms={filterAllFilms} updateFavFilm={updateFavFilm} searchFilms={searchFilms} handleSearch={handleSearch} deleteTitle={deleteTitle}/>}/>
         <Route path="form" element={<Form handleAddFilm={handleAddFilm}/>}/>
-        <Route path="fav" element={<Fav favFilm={favFilm}/>}/>
         <Route path="favpage" element={<FavPage favFilms={favFilms}/>}/>
      </Routes>
     </div>
