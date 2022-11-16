@@ -274,7 +274,8 @@
       "vehicles": [
         "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
+      "url": "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6",
+      "favorite": false
     },
     {
       "id": 10,

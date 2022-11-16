@@ -4,16 +4,19 @@ import {Link} from 'react-router-dom'
 function Nav() {
   return (
     <nav>
+      <div className='infoBar'>
       <Link to='/' >
-      Collection of Studio Ghibili Movies
+      Studio Ghibili Movies
       </Link>
     <Link to='/favpage' >
        Go To My Favorite Studio Ghibili Movies
       </Link>
       <Link to='/form' >
-      Add a New Studio Ghibili Movie
+      New Movie
       </Link>
-  </nav>
+      </div>
+      </nav>
+ 
   )
 }
 export default Nav;
