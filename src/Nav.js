@@ -6,10 +6,10 @@ function Nav() {
     <nav>
       <div className='infoBar'>
       <Link to='/' >
-      Studio Ghibili Movies
+      Home
       </Link>
-    <Link to='/fav' >
-       Favorite Movies
+    <Link to='/favpage' >
+       Favorites
       </Link>
       <Link to='/form' >
       New Movie

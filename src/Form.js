@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {Link} from "react-router-dom"
 
  function Form({handleAddFilm}) {
 const [newTitle, setNewTitle] = useState('')
@@ -19,6 +20,9 @@ handleAddFilm(newObj)
 return (
   <div className="new-movie-form">
     <h2>New Movie</h2>
+    <Link to='/' >
+        Back To Film Page
+      </Link>
     <form onSubmit={handleSubmit}>
       <input type="text" name="name" placeholder="Movie name" onChange={(e)=> setNewTitle(e.target.value)} value={newTitle}/>
       <input type="text" name="image" placeholder="Image URL" onChange={(e)=> setNewImage(e.target.value)} value={newImage}/>
