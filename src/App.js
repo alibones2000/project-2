@@ -48,11 +48,10 @@ function updateFavFilm(updatedFilm) {
     if (film.favorite === true) {
       return film
     } 
-    const eachFavFilm = favFilm.map(film => {
-      <Fav />
-    })
+   
   })
 }
+
 
   return (
     <div className="App">
@@ -60,7 +59,7 @@ function updateFavFilm(updatedFilm) {
       <Routes>
         <Route path="/" element={<MovieContainer filterAllFilms={filterAllFilms} updateFavFilm={updateFavFilm} searchFilms={searchFilms} handleSearch={handleSearch}/>}/>
         <Route path="form" element={<Form handleAddFilm={handleAddFilm}/>}/>
-        <Route path="fav" element={<Fav />}/>
+        <Route path="fav" element={<Fav favFilm={favFilm}/>}/>
      </Routes>
     </div>
   );
