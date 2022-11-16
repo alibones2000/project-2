@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 
-function MovieCard({film, updateFavFilm}) {
+function MovieCard({film, updateFavFilm, deleteTitle}) {
 const [originalTitle, setOriginalTitle] = useState (true)
-const {id, title, original_title, original_title_romanised, image, description, director, release_date} = film
-const [favorite, setFavorite] = useState(false)
+const {id, title, original_title, original_title_romanised, image, description, director, release_date, favorite} = film
+
 
 
 function handleClick () {
@@ -11,7 +11,7 @@ function handleClick () {
 }
 
 function handleFavClick(){
-  setFavorite((favorite) => !favorite)
+
   fetch(`http://localhost:3000/films/${id}`, {
     method: 'PATCH', 
     headers: {
@@ -21,6 +21,14 @@ function handleFavClick(){
   })
   .then(response => response.json())
   .then(data => updateFavFilm(data))
+}
+
+function handleDelete() {
+  fetch(`http://localhost:3000/films/${id}`, {
+    method: 'DELETE', 
+  })
+  .then(response => response.json())
+  .then(data => deleteTitle(data))
 }
   return (
 
@@ -36,7 +44,9 @@ function handleFavClick(){
       <button  onClick={handleFavClick} id="add-to-fav">
         Add to Favorites{favorite ? "💓" : "🤍"} 
       </button>
- 
+      <button  onClick={handleDelete} id="delete-title">
+        Delete Film 🗑️
+      </button>
       </div>
   );
 }

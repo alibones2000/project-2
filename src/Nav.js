@@ -7,7 +7,7 @@ function Nav() {
       <Link to='/' >
       Collection of Studio Ghibili Movies
       </Link>
-    <Link to='/fav' >
+    <Link to='/favpage' >
        Go To My Favorite Studio Ghibili Movies
       </Link>
       <Link to='/form' >
