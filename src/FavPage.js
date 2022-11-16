@@ -13,7 +13,7 @@ import FavCard from "./FavCard"
       <div>
       <h1>My Favorite Studio Ghibili Movies</h1>
       <Link to='/' >
-        Back To Film Page
+      Back To Film Page
       </Link>
       {eachFavFilm}
     </div>

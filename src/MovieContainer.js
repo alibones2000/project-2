@@ -1,9 +1,9 @@
 import MovieCard from './MovieCard'
 import React from 'react'
-import Search from './Search'
 
 
-function MovieContainer({filterAllFilms, updateFavFilm, searchFilms, handleSearch, deleteTitle}) {
+
+function MovieContainer({filterAllFilms, updateFavFilm, deleteTitle}) {
 
 const eachFilm = filterAllFilms.map(film => {
 return < MovieCard key={film.id} film={film} updateFavFilm={updateFavFilm} deleteTitle={deleteTitle}/>
@@ -11,7 +11,6 @@ return < MovieCard key={film.id} film={film} updateFavFilm={updateFavFilm} delet
 
   return (
     <div>
-      <Search searchFilms={searchFilms} handleSearch={handleSearch}/>
       {eachFilm}
    
     </div>

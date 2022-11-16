@@ -48,13 +48,7 @@ function updateFavFilm(updatedFilm) {
       return updatedFilm
     } else return film
   })
-  setFilms(updatedFilms)
-  const favFilm = updatedFilms.filter(film => {
-    if (film.favorite === true) {
-      return film
-    } 
-   
-  })
+  setFilms(updatedFilms) 
 }
 const favFilms = films.filter(film => {
   if (film.favorite === true) {
@@ -66,7 +60,7 @@ const favFilms = films.filter(film => {
 
   return (
     <div className="App">
-       <Nav />
+       <Nav searchFilms={searchFilms} handleSearch={handleSearch}/>
       <Routes>
         <Route path="/" element={<MovieContainer filterAllFilms={filterAllFilms} updateFavFilm={updateFavFilm} searchFilms={searchFilms} handleSearch={handleSearch} deleteTitle={deleteTitle}/>}/>
         <Route path="form" element={<Form handleAddFilm={handleAddFilm}/>}/>

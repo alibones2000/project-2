@@ -1,21 +1,29 @@
 import React from 'react'
+import Search from './Search';
 import {Link} from 'react-router-dom'
 
-function Nav() {
+function Nav({searchFilms, handleSearch, }) {
   return (
-    <nav>
-      <div className='infoBar'>
-      <Link to='/' >
-      Home
+    <div className='infoBar'>
+      <ul>
+        <li className="nav-button">
+      <Link style = {{textDecoration: 'none', color:'white'}} to='/' >
+         Home
       </Link>
-    <Link to='/favpage' >
-       Favorites
+      </li>
+      <li className="nav-button">
+    <Link style = {{textDecoration: 'none', color:'white'}} to='/favpage' >
+    Favorites
       </Link>
-      <Link to='/form' >
-      New Movie
+      </li>
+      <li className="nav-button">
+      <Link  style =  {{textDecoration: 'none', color:'white'}} to='/form' >
+        New Movie
       </Link>
+      </li>
+      </ul>
+      <Search searchFilms={searchFilms} handleSearch={handleSearch}/>
       </div>
-      </nav>
  
   )
 }

@@ -32,21 +32,22 @@ function handleDelete() {
 }
   return (
 
-      <div >
-        <img onClick={handleClick} src={image} alt={title}/>
+      <div className='film-info' >
+        <img className='img-size' onClick={handleClick} src={image} alt={title}/>
         <div >
           <h1>{title}</h1>
           <h2>{originalTitle ? original_title : original_title_romanised}</h2>
-          <p>{description}</p>
           <p>{director}</p>
           <p>{release_date} </p>
-        </div>
-      <button  onClick={handleFavClick} id="add-to-fav">
+          <p>{description}</p>
+          <button  onClick={handleFavClick} id="add-to-fav">
         Add to Favorites{favorite ? "💓" : "🤍"} 
       </button>
       <button  onClick={handleDelete} id="delete-title">
         Delete Film 🗑️
       </button>
+        </div>
+   
       </div>
   );
 }

@@ -8,9 +8,9 @@ function FavCard({favFilm}) {
         setOriginalTitle((originalTitle) => !originalTitle)
     }
   return (
-    <div>
+    <div className='film-info'>
     <div >
-        <img onClick={handleFavTitle} src={image} alt={title}/>
+        <img className='img-size' onClick={handleFavTitle} src={image} alt={title}/>
         </div>
         <div >
           <h1>{title}</h1>
