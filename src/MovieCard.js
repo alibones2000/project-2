@@ -28,7 +28,7 @@ function handleDelete() {
     method: 'DELETE', 
   })
   .then(response => response.json())
-  .then(data => deleteTitle(data))
+  .then(()=> deleteTitle(film))
 }
   return (
 

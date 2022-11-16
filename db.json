@@ -44,13 +44,20 @@
       "release_date": "1988",
       "running_time": "89",
       "rt_score": "97",
-      "people": ["https://ghibliapi.herokuapp.com/people/"],
+      "people": [
+        "https://ghibliapi.herokuapp.com/people/"
+      ],
       "species": [
         "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
       ],
-      "locations": ["https://ghibliapi.herokuapp.com/locations/"],
-      "vehicles": ["https://ghibliapi.herokuapp.com/vehicles/"],
-      "url": "https://ghibliapi.herokuapp.com/films/12cfb892-aac0-4c5b-94af-521852e46d6a"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
+      ],
+      "vehicles": [
+        "https://ghibliapi.herokuapp.com/vehicles/"
+      ],
+      "url": "https://ghibliapi.herokuapp.com/films/12cfb892-aac0-4c5b-94af-521852e46d6a",
+      "favorite": true
     },
     {
       "id": 3,
@@ -82,8 +89,12 @@
         "https://ghibliapi.herokuapp.com/species/603428ba-8a86-4b0b-a9f1-65df6abef3d3",
         "https://ghibliapi.herokuapp.com/species/74b7f547-1577-4430-806c-c358c8b6bcf5"
       ],
-      "locations": ["https://ghibliapi.herokuapp.com/locations/"],
-      "vehicles": ["https://ghibliapi.herokuapp.com/vehicles/"],
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
+      ],
+      "vehicles": [
+        "https://ghibliapi.herokuapp.com/vehicles/"
+      ],
       "url": "https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49"
     },
     {
@@ -111,8 +122,12 @@
         "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
         "https://ghibliapi.herokuapp.com/species/603428ba-8a86-4b0b-a9f1-65df6abef3d3"
       ],
-      "locations": ["https://ghibliapi.herokuapp.com/locations/"],
-      "vehicles": ["https://ghibliapi.herokuapp.com/vehicles/"],
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
+      ],
+      "vehicles": [
+        "https://ghibliapi.herokuapp.com/vehicles/"
+      ],
       "url": "https://ghibliapi.herokuapp.com/films/ea660b10-85c4-4ae3-8a5f-41cea3648e3e"
     },
     {
