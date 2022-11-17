@@ -3,10 +3,10 @@ import React from 'react'
 
 
 
-function MovieContainer({filterAllFilms, updateFavFilm, deleteTitle}) {
+function MovieContainer({filterAllFilms, updateFavFilm, updateCartFilm}) {
 
 const eachFilm = filterAllFilms.map(film => {
-return < MovieCard key={film.id} film={film} updateFavFilm={updateFavFilm} deleteTitle={deleteTitle}/>
+return < MovieCard key={film.id} film={film} updateFavFilm={updateFavFilm} updateCartFilm={updateCartFilm}/>
 })
 
   return (
