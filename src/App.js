@@ -1,9 +1,10 @@
 import React , {useState, useEffect} from 'react'
 import './App.css';
-import Form from './Form'
+import Checkout from './Checkout'
+import Home from './Home'
 import MovieContainer from './MovieContainer'
 import Nav from './Nav'
-import FavPage from './FavPage'
+import CartPage from './CartPage'
 import {Routes, Route} from "react-router-dom"
 
 
@@ -27,22 +28,22 @@ function App() {
     setSearchFilms(e.target.value)
   }
 
-  function handleAddFilm(newObj){
-    fetch('http://localhost:3000/films',{
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(newObj)
-  })
-  .then(res => res.json())
-  .then(data => setFilms([...films, data]))
-}
+//   function handleAddFilm(newObj){
+//     fetch('http://localhost:3000/films',{
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(newObj)
+//   })
+//   .then(res => res.json())
+//   .then(data => setFilms([...films, data]))
+// }
 function deleteTitle(deletedItem) {
   const updateDeletedFilms = films.filter(film => film.id !== deletedItem.id);
   setFilms(updateDeletedFilms)
 }
-function updateFavFilm(updatedFilm) {
+function updateCartFilm(updatedFilm) {
   const updatedFilms = films.map(film => {
     if (film.id === updatedFilm.id) {
       return updatedFilm
@@ -50,8 +51,8 @@ function updateFavFilm(updatedFilm) {
   })
   setFilms(updatedFilms) 
 }
-const favFilms = films.filter(film => {
-  if (film.favorite === true) {
+const cartFilms = films.filter(film => {
+  if (film.cart === true) {
     return film
   } 
 })
@@ -62,9 +63,10 @@ const favFilms = films.filter(film => {
     <div className="App">
        <Nav searchFilms={searchFilms} handleSearch={handleSearch}/>
       <Routes>
-        <Route path="/" element={<MovieContainer filterAllFilms={filterAllFilms} updateFavFilm={updateFavFilm} searchFilms={searchFilms} handleSearch={handleSearch} deleteTitle={deleteTitle}/>}/>
-        <Route path="form" element={<Form handleAddFilm={handleAddFilm}/>}/>
-        <Route path="favpage" element={<FavPage favFilms={favFilms}/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="moviecontainer" element={<MovieContainer filterAllFilms={filterAllFilms} updateCartFilm={updateCartFilm} searchFilms={searchFilms} handleSearch={handleSearch} />}/>
+        <Route path="checkout" element={<Checkout/>}/>
+        <Route path="cartpage" element={<CartPage cartFilms={cartFilms} deleteTitle={deleteTitle}/>}/>
      </Routes>
     </div>
   );
