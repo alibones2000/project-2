@@ -62,14 +62,14 @@ div img{
 
 }
 
-.film-info{
+.film-info {
 border-style: solid;
 border-radius: 15px 50px 30px;
 margin: auto;
 width: 800px;
 background-color: rgba(166, 161, 161, 0.628);
 margin-bottom: 100px;
-height: 500px;
+height: 580px;
 margin-top: 30px;
 font-family: fantasy;
 
@@ -80,6 +80,21 @@ font-family: fantasy;
   filter: drop-shadow(0 0 0.75rem green);
 
 } 
+.film-cart-info {
+border-style: solid;
+border-radius: 15px 50px 30px;
+margin: auto;
+width: 800px;
+background-color: rgba(166, 161, 161, 0.628);
+margin-bottom: 100px;
+height: 580px;
+margin-top: 30px;
+font-family: fantasy;
+}
+.film-cart-info:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  filter: drop-shadow(0 0 0.75rem green);
+}
 .form {
   margin-top: 100px;
   width: 800px;
@@ -151,7 +166,7 @@ select {
   transform: scale(1.2);
 
 }
-#add-to-fav, #delete-title {
+#add-to-cart, #delete-title {
   margin-right: 15px;
   text-decoration: none;
   padding: 10px;
@@ -164,11 +179,11 @@ select {
   
 }
 
-#add-to-fav {
+#add-to-cart {
   transition: all .2s ease-in-out;
 }
 
-#add-to-fav:hover {
+#add-to-cart:hover {
   transform: scale(1.1);
   color: rgb(214, 16, 122);
 }
@@ -183,4 +198,15 @@ select {
   padding: 10px 10px;
   border-radius: 24px;
   border: none;
+}
+.home-greeting h1{
+  font-family: fantasy;
+  font-size: 100px;
+  text-shadow: 10px 10px #599ea5;
+
+}
+.home-text{
+  font-family: fantasy;
+  font-size: 30px;
+
 }
