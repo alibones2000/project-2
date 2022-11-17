@@ -69,7 +69,9 @@ margin: auto;
 width: 800px;
 background-color: rgba(166, 161, 161, 0.628);
 margin-bottom: 100px;
-height: 400px;
+height: 500px;
+margin-top: 30px;
+font-family: fantasy;
 
 
 }
@@ -79,11 +81,11 @@ height: 400px;
 
 } 
 .form {
-margin-top: 100px;
+  margin-top: 100px;
   width: 800px;
   margin-bottom: 100px; 
-   overflow: auto;
-   justify-content: space-between;
+  overflow: auto;
+  justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
   display: flex;
@@ -91,10 +93,10 @@ margin-top: 100px;
   width: 50vw;
   display: flex;  
   position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -70px;
-  margin-left: -330px
+  top: 10%;
+  left: 25%;
+  /* margin-top: -70px;
+  margin-left: -330px */
 }
 .form input {
  align-items: flex-start;
@@ -105,13 +107,15 @@ margin-top: 100px;
   border-radius: 10px;
   box-shadow: 0 0 15px 4px;
   width: 200px;
-  padding: 12px;
+  padding: 15px;
   background-color: #127ac988;
   color: rgb(240, 248, 255);
-  font-family: 'Russo One', sans-serif;
+  /* font-family: 'Russo One', sans-serif; */
+  font-weight: bolder;
   font-size: 1.2rem;
   border-radius: 24px;
   border: none;
+  font-family: fantasy
   
   
 }
@@ -126,6 +130,57 @@ select {
   color: rgb(240, 248, 255);
   font-family: 'Russo One', sans-serif;
   font-size: 1.2rem;
+  border-radius: 24px;
+  border: none;
+}
+.form button {
+  text-align: center;
+  border: none;
+  padding: 10px;
+  transition: all .2s ease-in-out;
+  border-radius: 24px;
+  font-weight: bold;
+  font-family: fantasy;
+  width: 30%;
+  background-color: #127ac988;
+  color: white;
+  transition: all .2s ease-in-out;
+  ;
+}
+.form button:hover {
+  transform: scale(1.2);
+
+}
+#add-to-fav, #delete-title {
+  margin-right: 15px;
+  text-decoration: none;
+  padding: 10px;
+  display: inline;
+  font-family: fantasy;
+  text-align: center;
+  font-weight: bolder;
+  border-radius: 30px;
+  border: none;
+  
+}
+
+#add-to-fav {
+  transition: all .2s ease-in-out;
+}
+
+#add-to-fav:hover {
+  transform: scale(1.1);
+  color: rgb(214, 16, 122);
+}
+#delete-title {
+  transition: all .2s ease-in-out;
+}
+#delete-title:hover {
+  transform: scale(1.1);
+  color: rgb(179, 19, 19);
+}
+.searchbar input{
+  padding: 10px 10px;
   border-radius: 24px;
   border: none;
 }

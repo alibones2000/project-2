@@ -12,7 +12,7 @@ import FavCard from "./FavCard"
     <div id="fav">
       <div>
       <h1>My Favorite Studio Ghibili Movies</h1>
-      <Link to='/' >
+      <Link style = {{textDecoration: 'none', color:'black'}} to='/' >
       Back To Film Page
       </Link>
       {eachFavFilm}

@@ -37,8 +37,8 @@ function handleDelete() {
         <div >
           <h1>{title}</h1>
           <h2>{originalTitle ? original_title : original_title_romanised}</h2>
-          <p>{director}</p>
-          <p>{release_date} </p>
+          <p>Director: {director}</p>
+          <p>Release Date: {release_date} </p>
           <p>{description}</p>
           <button  onClick={handleFavClick} id="add-to-fav">
         Add to Favorites{favorite ? "💓" : "🤍"} 
