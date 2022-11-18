@@ -15,10 +15,10 @@ function handleSubmit(e){
   e.preventDefault();
   emailjs.sendForm('service_mokb0jf', 'template_p409mi3', form.current, 'VCgJ_An6l4ksKowTW')
     .then((result) => {
-        console.log(result.text);
+        console.log(result.text)
     }, (error) => {
-        console.log(error.text);
-    });
+        console.log(error.text)
+    })
     e.target.reset();
 };
 
@@ -31,6 +31,7 @@ return (
       Back To Film Page
       </Link>
       </div>
+      <a href="mailto:studiojiggly81@gmail.com?subject='Thank you for your purchase'&body='Thank you'">Click to Send an Email</a>
     <form 
     ref={form}
     className="form"
