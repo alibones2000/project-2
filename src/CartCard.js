@@ -9,10 +9,14 @@ function CartCard({cartFilm, deleteTitle}) {
     }
     function handleDelete() {
       fetch(`http://localhost:3000/films/${id}`, {
-        method: 'DELETE', 
+        method: 'PATCH', 
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({cart : !cartFilm.cart}),
       })
       .then(response => response.json())
-      .then(()=> deleteTitle(cartFilm))
+      .then((data)=> deleteTitle(data))
     }
   return (
     <div className='film-cart-info'>

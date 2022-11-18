@@ -53,7 +53,7 @@ return (
       placeholder="Email Address" 
       onChange={(e)=> setEmailAddress(e.target.value)} 
       value={emailAddress}/>
-      <button type="submit">Purchase Film</button>
+      <button type="submit">Purchase Ticket</button>
     </form>
    
   </div>

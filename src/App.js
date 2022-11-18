@@ -40,9 +40,14 @@ function App() {
 //   .then(data => setFilms([...films, data]))
 // }
 function deleteTitle(deletedItem) {
-  const updateDeletedFilms = films.filter(film => film.id !== deletedItem.id);
-  setFilms(updateDeletedFilms)
+  const updateDeletedFilms = films.map(film => {
+    if (film.id === deletedItem.id) {
+      return deletedItem
+    } else return film
+  })
+  setFilms(updateDeletedFilms) 
 }
+
 function updateCartFilm(updatedFilm) {
   const updatedFilms = films.map(film => {
     if (film.id === updatedFilm.id) {
