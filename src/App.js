@@ -28,17 +28,6 @@ function App() {
     setSearchFilms(e.target.value)
   }
 
-//   function handleAddFilm(newObj){
-//     fetch('http://localhost:3000/films',{
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(newObj)
-//   })
-//   .then(res => res.json())
-//   .then(data => setFilms([...films, data]))
-// }
 function deleteTitle(deletedItem) {
   const updateDeletedFilms = films.map(film => {
     if (film.id === deletedItem.id) {

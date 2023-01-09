@@ -1,9 +1,5 @@
-import React from 'react'
-import Search from './Search';
-import {Link} from 'react-router-dom'
-
-
-
+import {Link} from "react-router-dom";
+import Search  from './Search'
 
 function Nav({searchFilms, handleSearch}) {
   return (
